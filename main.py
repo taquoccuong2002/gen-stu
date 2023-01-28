@@ -10,15 +10,6 @@ import vn_fullname_generator as generator
 import random
 from datetime import datetime, timedelta
 
-student_class = ["Y tế","Công nghệ thông tin", "Kinh tế","Quản trị kinh doanh", "Ngân hàng", "Kế toán", "Luật", "Xây dựng", "Tài chính", "Cơ khí"]
-
-def generate_student_info():
-    name = ' '.join(faker.name().split())
-    major = random.choice(student_class)
-    birthdate = datetime(random.randint(2000, 2005), random.randint(1, 12), random.randint(1, 28))
-    student_id = f"{birthdate.year % 100 + 20}{major[:2]}{random.randint(1000, 9999)}"
-    return {'Name': name, 'Major': major, 'Birthdate': birthdate.strftime('%d/%m/%Y'), 'Student ID': student_id}
-
 import random
 from datetime import datetime
 from faker import Faker
